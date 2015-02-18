@@ -1,0 +1,91 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="menudemo.SiteMaster" %>
+<%@ Register TagPrefix="seeotto" TagName="header" Src="UserControl/Topnavigation.ascx" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+     <script src="http://code.jquery.com/jquery-latest.js"></script>
+    
+    <link href="Content/menu.css" rel="stylesheet" />
+    
+    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+</head>
+    <script  type="text/javascript">
+        $(document).ready(function () {
+            $('div[id^=div]').hide();
+            $("#div1").show();
+            $("#liitem1").click(function () {
+                alert('Hello1');
+                $('div[id^=div]').hide();
+                $("#div1").show();
+                
+            });
+            $("#liitem2").click(function () {
+                alert('Hello2');
+                $('div[id^=div]').hide();
+                $("#div2").show();
+                
+            });
+            $("#liitem3").click(function () {
+                alert('Hello3');
+                $('div[id^=div]').hide();
+                $("#div3").show();
+                
+            });
+            $("#liitem4").click(function () {
+                alert('Hello4');
+                $('div[id^=div]').hide();
+                $("#div4").show();
+
+            });
+            $("#liitem5").click(function () {
+                alert('Hello5');
+                $('div[id^=div]').hide();
+                $("#div5").show();
+
+            });
+            $("#liitem6").click(function () {
+                alert('Hello6');
+                $('div[id^=div]').hide();
+                $("#div6").show();
+
+            });
+        });
+
+
+  
+</script>
+    
+<body>
+    <form runat="server">
+  
+   
+        <div class="content-wrapper">
+            <div class="float-left">
+              
+            </div>
+            <div class="float-right">
+               
+                
+
+            </div>
+        </div>
+   
+    <div id="body">
+        <seeotto:header ID="MyHeader" runat="server" />
+        <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
+        <section class="content-wrapper main-content clear-fix">
+            <asp:ContentPlaceHolder runat="server" ID="MainContent"/>
+        </section>
+    </div>
+    <footer>
+        <div class="content-wrapper">
+            <div class="float-left">
+                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+            </div>
+        </div>
+    </footer>
+    </form>
+</body>
+</html>
