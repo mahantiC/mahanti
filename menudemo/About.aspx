@@ -23,12 +23,13 @@
     <aside>
         <h3>Aside Title</h3>
         <p>        
-            Use this area to provide additional information.
+            Use this area to provide additional information. Adding version two testing line here.
         </p>
         <ul>
             <li><a runat="server" href="~/">Home</a></li>
             <li><a runat="server" href="~/About">About</a></li>
             <li><a runat="server" href="~/Contact">Contact</a></li>
         </ul>
+       
     </aside>
 </asp:Content>
